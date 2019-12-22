@@ -41,11 +41,13 @@ const openLink = () => {
 };
 
 const sayHelloObjC = () => {
-  return NativeMyTurboModule.greeting();
+  const text = NativeMyTurboModule.greeting();
+  return `>>> ${text}`;
 };
 
 const sayHelloCxx = () => {
-  return NativeMyTurboModuleCxx.greeting();
+  const text = NativeMyTurboModuleCxx.greeting();
+  return `>>> ${text}`;
 };
 
 const App: FunctionComponent = () => {
@@ -77,10 +79,7 @@ const App: FunctionComponent = () => {
                 <Text style={styles.turboModuleName}>
                   NativeMyTurboModuleCxx (C++):
                 </Text>
-                <Text
-                  style={
-                    styles.turboModuleResult
-                  }>{`>> ${sayHelloCxx()}`}</Text>
+                <Text style={styles.turboModuleResult}>{sayHelloCxx()}</Text>
               </Legend>
             </View>
 
