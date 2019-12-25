@@ -21,7 +21,10 @@ export const Container: FunctionComponent<SectionContainerType> = ({
     <View style={styles.legend}>
       {children}
       {onRetryPress && (
-        <TouchableOpacity activeOpacity={0.8} style={styles.buttonRetry}>
+        <TouchableOpacity
+          activeOpacity={0.8}
+          style={styles.buttonRetry}
+          onPress={onRetryPress}>
           <Text style={styles.textButtonRetry}>Retry</Text>
         </TouchableOpacity>
       )}
