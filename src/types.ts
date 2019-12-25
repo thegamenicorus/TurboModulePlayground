@@ -6,4 +6,5 @@ export interface SectionContainerType {
 export interface LogType {
   caption: string;
   value: string;
+  fetching?: boolean;
 }
