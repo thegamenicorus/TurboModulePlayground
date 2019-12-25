@@ -138,7 +138,7 @@ function translatePrimitiveJSTypeToObjCTypeForReturn(
     case 'Int32TypeAnnotation':
       return wrapIntoNullableIfNeeded('NSNumber *');
     case 'BooleanTypeAnnotation':
-      return type.nullable ? 'NSNumber * _Nullable' : 'BOOL';
+      return type.nullable ? 'NSNumber * _Nullable' : 'NSNumber *';
     case 'GenericObjectTypeAnnotation':
       return wrapIntoNullableIfNeeded('NSDictionary *');
     case 'ArrayTypeAnnotation':
