@@ -22,6 +22,11 @@ import NativeMyTurboModule from './turbomodules/NativeMyTurboModule';
 import NativeMyTurboModuleCxx from './turbomodules/NativeMyTurboModuleCxx';
 import Greeting from './components/Greeting';
 import { Header, Footer } from './components/Page';
+import NumberAndBoolean from './components/NumberAndBoolean';
+import GetObject from './components/GetObject';
+import GetArray from './components/GetArray';
+import SimulateCallback from './components/SimulateCallback';
+import SimulatePromise from './components/SimulatePromise';
 
 declare var global: { HermesInternal: null | {} };
 
@@ -42,6 +47,12 @@ const App: FunctionComponent = () => {
               nativeModule={NativeMyTurboModule}
               nativeModuleCxx={NativeMyTurboModuleCxx}
             />
+            <NumberAndBoolean nativeModule={NativeMyTurboModule} />
+            <GetObject nativeModule={NativeMyTurboModule} />
+            <GetArray nativeModule={NativeMyTurboModule} />
+            <SimulateCallback nativeModule={NativeMyTurboModule} />
+            <SimulatePromise error={false} nativeModule={NativeMyTurboModule} />
+            <SimulatePromise error={true} nativeModule={NativeMyTurboModule} />
             <Footer />
           </View>
         </ScrollView>

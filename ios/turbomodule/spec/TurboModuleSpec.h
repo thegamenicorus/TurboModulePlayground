@@ -28,6 +28,17 @@
 
 @protocol NativeMyTurboModuleSpec <RCTTurboModule>
 - (NSString *) greeting;
+- (NSNumber *) getRandomNumber;
+- (NSNumber *) addItBy30:(double)num;
+- (NSNumber *) isBiggerThan100:(double)num;
+- (NSArray<id<NSObject>> *) nativeReverse:(NSArray *)array;
+- (void) simulateCallback:(double)waitingSeconds
+   callback:(RCTResponseSenderBlock)callback;
+- (void) simulatePromise:(BOOL)error
+   waitingSeconds:(double)waitingSeconds
+   resolve:(RCTPromiseResolveBlock)resolve
+   reject:(RCTPromiseRejectBlock)reject;
+- (NSDictionary *) getDeviceInfo;
 @end
 
 
