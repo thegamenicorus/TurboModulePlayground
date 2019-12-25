@@ -1,13 +1,30 @@
 import React, { FunctionComponent } from 'react';
-import { StyleSheet, View, Text, TouchableOpacity } from 'react-native';
+import {
+  StyleSheet,
+  View,
+  Text,
+  TouchableOpacity,
+  ActivityIndicator,
+} from 'react-native';
 
 import { SectionContainerType, LogType } from '../types';
 import print from '../utils/print';
 
-export const Log: FunctionComponent<LogType> = ({ caption, value }) => (
+export const Log: FunctionComponent<LogType> = ({
+  caption,
+  value,
+  fetching,
+}) => (
   <>
     <Text style={styles.textCaption}>{caption}</Text>
-    <Text style={styles.textValue}>{print(value)}</Text>
+    {fetching ? (
+      <View style={styles.row}>
+        <Text style={styles.textValue}>{print('')}</Text>
+        <ActivityIndicator size="small" />
+      </View>
+    ) : (
+      <Text style={styles.textValue}>{print(value)}</Text>
+    )}
   </>
 );
 
@@ -21,7 +38,10 @@ export const Container: FunctionComponent<SectionContainerType> = ({
     <View style={styles.legend}>
       {children}
       {onRetryPress && (
-        <TouchableOpacity activeOpacity={0.8} style={styles.buttonRetry}>
+        <TouchableOpacity
+          activeOpacity={0.8}
+          style={styles.buttonRetry}
+          onPress={onRetryPress}>
           <Text style={styles.textButtonRetry}>Retry</Text>
         </TouchableOpacity>
       )}
@@ -30,6 +50,9 @@ export const Container: FunctionComponent<SectionContainerType> = ({
 );
 
 const styles = StyleSheet.create({
+  row: {
+    flexDirection: 'row',
+  },
   sectionContainer: {
     marginTop: 32,
     paddingHorizontal: 24,
