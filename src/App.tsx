@@ -21,8 +21,7 @@ import {
 import NativeMyTurboModule from './turbomodules/NativeMyTurboModule';
 import NativeMyTurboModuleCxx from './turbomodules/NativeMyTurboModuleCxx';
 import Greeting from './components/Greeting';
-import Footer from './components/Footer';
-import Header from './components/Header';
+import { Header, Footer } from './components/Page';
 
 declare var global: { HermesInternal: null | {} };
 
