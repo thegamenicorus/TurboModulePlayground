@@ -43,7 +43,6 @@ const App: FunctionComponent = () => {
               nativeModule={NativeMyTurboModule}
               nativeModuleCxx={NativeMyTurboModuleCxx}
             />
-
             <Footer />
           </View>
         </ScrollView>
