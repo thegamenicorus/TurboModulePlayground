@@ -1,6 +1,6 @@
 export interface SectionContainerType {
   title: string;
-  onRetryPress?: () => void | null;
+  onRetryPress?: () => void;
 }
 
 export interface LogType {
