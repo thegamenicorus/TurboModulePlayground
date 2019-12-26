@@ -8,6 +8,8 @@
 
 - only iOS is supported at the moment. PRs for Android are welcome.
 
+<img src="https://user-images.githubusercontent.com/21040043/71474177-649f7580-282e-11ea-8d30-ba0025f1591d.png" width="300" /><img src="https://user-images.githubusercontent.com/21040043/71474178-65380c00-282e-11ea-903c-1c8083ba3dc3.png" width="300" />
+
 ## Getting started
 
 1. Clone this repository.
