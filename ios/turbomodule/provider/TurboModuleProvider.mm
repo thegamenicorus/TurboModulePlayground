@@ -8,6 +8,7 @@
 #import "TurboModuleProvider.h"
 
 #import <React/CoreModulesPlugins.h>
+#import "MyTurboModule.h"
 #import "MyTurboModuleCxx.h"
 
 // NOTE: This entire file should be codegen'ed.
@@ -29,9 +30,9 @@ std::shared_ptr<TurboModule> TurboModuleProvider(const std::string &name, std::s
 std::shared_ptr<TurboModule> TurboModuleProvider(const std::string &name,
                                                          id<RCTTurboModule> instance,
                                                         std::shared_ptr<JSCallInvoker> jsInvoker) {
-//  if (name == "SampleTurboModule") {
-//    return std::make_shared<NativeSampleTurboModuleSpecJSI>(instance, jsInvoker);
-//  }
+  if (name == "MyTurboModule") {
+    return std::make_shared<NativeMyTurboModuleSpecJSI>(instance, jsInvoker);
+  }
   return nullptr;
 }
 
