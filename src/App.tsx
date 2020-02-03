@@ -19,7 +19,7 @@ import {
 } from 'react-native';
 
 import NativeMyTurboModule from './turbomodules/NativeMyTurboModule';
-import NativeMyTurboModuleCxx from './turbomodules/NativeMyTurboModuleCxx';
+// import NativeMyTurboModuleCxx from './turbomodules/NativeMyTurboModuleCxx';
 import Greeting from './components/Greeting';
 import { Header, Footer } from './components/Page';
 
@@ -27,6 +27,7 @@ declare var global: { HermesInternal: null | {} };
 
 const App: FunctionComponent = () => {
   if (Platform.OS === 'android') {
+    alert(NativeMyTurboModule.greeting());
     return <View />;
   }
   return (
@@ -38,10 +39,10 @@ const App: FunctionComponent = () => {
           style={styles.scrollView}>
           <Header />
           <View style={styles.body}>
-            <Greeting
+            {/* <Greeting
               nativeModule={NativeMyTurboModule}
               nativeModuleCxx={NativeMyTurboModuleCxx}
-            />
+            /> */}
             <Footer />
           </View>
         </ScrollView>
