@@ -18,7 +18,7 @@ public class TurboModuleProvider extends TurboReactPackage {
     public ReactModuleInfoProvider getReactModuleInfoProvider() {
         try {
             Class<?> reactModuleInfoProviderClass =
-                    Class.forName("com.facebook.react.CoreModulesPackage$$ReactModuleInfoProvider");
+                    Class.forName("com.turbomoduleplayground.turbomodule.provider.TurboModuleProvider$$ReactModuleInfoProvider");
             return (ReactModuleInfoProvider) reactModuleInfoProviderClass.newInstance();
         } catch (ClassNotFoundException e) {
             // In OSS case, the annotation processor does not run. We fall back on creating this byhand
@@ -51,10 +51,10 @@ public class TurboModuleProvider extends TurboReactPackage {
             };
         }catch (InstantiationException e) {
             throw new RuntimeException(
-                    "No ReactModuleInfoProvider for CoreModulesPackage$$ReactModuleInfoProvider", e);
+                    "No ReactModuleInfoProvider for TurboModuleProvider$$ReactModuleInfoProvider", e);
         } catch (IllegalAccessException e) {
             throw new RuntimeException(
-                    "No ReactModuleInfoProvider for CoreModulesPackage$$ReactModuleInfoProvider", e);
+                    "No ReactModuleInfoProvider for TurboModuleProvider$$ReactModuleInfoProvider", e);
         }
     }
 
