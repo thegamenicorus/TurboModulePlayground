@@ -28,7 +28,8 @@ declare var global: { HermesInternal: null | {} };
 const App: FunctionComponent = () => {
   let NativeMyTurboModuleCxx = null;
   if (Platform.OS === 'ios') {
-    NativeMyTurboModuleCxx = require('./turbomodules/NativeMyTurboModuleCxx');
+    NativeMyTurboModuleCxx = require('./turbomodules/NativeMyTurboModuleCxx')
+      .default;
   }
   return (
     <>
