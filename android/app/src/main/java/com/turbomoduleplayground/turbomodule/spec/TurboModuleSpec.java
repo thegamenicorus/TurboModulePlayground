@@ -32,8 +32,11 @@ public abstract class TurboModuleSpec extends ReactContextBaseJavaModule impleme
 
 //    protected abstract Map<String, Object> getTypedExportedConstants();
 
-    @ReactMethod
-    public abstract @Nullable Map<String, Object> getConstants();
+    // @ReactMethod
+    // public abstract @Nullable Map<String, Object> getConstants();
+
+    @ReactMethod(isBlockingSynchronousMethod = true)
+    public abstract @Nullable String language();
 
     @ReactMethod(isBlockingSynchronousMethod = true)
     public abstract @Nullable String greeting();

@@ -19,6 +19,7 @@ class MyTurboModuleCxx : public NativeMyTurboModuleCxxSpecJSI {
  public:
   MyTurboModuleCxx(std::shared_ptr<JSCallInvoker> jsInvoker);  
   
+  jsi::String language(jsi::Runtime &rt)override;
   jsi::String greeting(jsi::Runtime &rt)override;
 };
 

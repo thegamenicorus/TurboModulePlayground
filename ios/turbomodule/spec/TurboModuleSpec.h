@@ -27,6 +27,7 @@
 
 
 @protocol NativeMyTurboModuleSpec <RCTTurboModule>
+- (NSString *) language;
 - (NSString *) greeting;
 @end
 

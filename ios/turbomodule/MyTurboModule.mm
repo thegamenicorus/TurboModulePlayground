@@ -20,6 +20,10 @@ using namespace facebook::react;
   return std::make_shared<NativeMyTurboModuleSpecJSI>(self, jsInvoker);
 }
 
+- (NSString *)language{
+  return @"Obj-C";
+}
+
 - (NSString *)greeting{
   return @"Hello from Objective-C Module";
 }

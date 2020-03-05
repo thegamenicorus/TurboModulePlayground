@@ -18,6 +18,7 @@ protected:
   NativeMyTurboModuleCxxSpecJSI(std::shared_ptr<JSCallInvoker> jsInvoker);
 
 public:
+virtual jsi::String language(jsi::Runtime &rt) = 0;
 virtual jsi::String greeting(jsi::Runtime &rt) = 0;
 
 };

@@ -22,17 +22,24 @@ public class MyTurboModule extends TurboModuleSpec implements TurboModule {
         super(reactContext);
     }
 
+    // getName() is required
     @Override
     public String getName() {
         return NAME;
     }
 
+    // @Nullable
+    // @Override
+    // public Map<String, Object> getConstants() {
+    //     HashMap<String, Object> constants = new HashMap<>();
+    //     constants.put("name", "TheGame Nicorus");
+    //     return constants;
+    // }
+
     @Nullable
     @Override
-    public Map<String, Object> getConstants() {
-        HashMap<String, Object> constants = new HashMap<>();
-        constants.put("name", "TheGame Nicorus");
-        return constants;
+    public String language() {
+        return "Java";
     }
 
     @Nullable

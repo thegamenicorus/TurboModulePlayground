@@ -18,6 +18,10 @@ MyTurboModuleCxx::MyTurboModuleCxx(
     std::shared_ptr<JSCallInvoker> jsInvoker)
     : NativeMyTurboModuleCxxSpecJSI(jsInvoker) {}
 
+jsi::String MyTurboModuleCxx::language(jsi::Runtime &rt) {
+  return jsi::String::createFromUtf8(rt, "C++");
+}
+
 jsi::String MyTurboModuleCxx::greeting(jsi::Runtime &rt) {
   return jsi::String::createFromUtf8(rt, "Hello from Cpp Module");
 }

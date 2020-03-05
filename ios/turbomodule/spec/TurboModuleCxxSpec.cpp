@@ -11,12 +11,16 @@
 namespace facebook {
 namespace react {
 
+static jsi::Value __hostFunction_NativeMyTurboModuleCxxSpecJSI_language(jsi::Runtime &rt, TurboModule &turboModule, const jsi::Value* args, size_t count) {
+  return static_cast<NativeMyTurboModuleCxxSpecJSI *>(&turboModule)->language(rt);
+}
 static jsi::Value __hostFunction_NativeMyTurboModuleCxxSpecJSI_greeting(jsi::Runtime &rt, TurboModule &turboModule, const jsi::Value* args, size_t count) {
   return static_cast<NativeMyTurboModuleCxxSpecJSI *>(&turboModule)->greeting(rt);
 }
 
 NativeMyTurboModuleCxxSpecJSI::NativeMyTurboModuleCxxSpecJSI(std::shared_ptr<JSCallInvoker> jsInvoker)
   : TurboModule("MyTurboModuleCxx", jsInvoker) {
+  methodMap_["language"] = MethodMetadata {0, __hostFunction_NativeMyTurboModuleCxxSpecJSI_language};
   methodMap_["greeting"] = MethodMetadata {0, __hostFunction_NativeMyTurboModuleCxxSpecJSI_greeting};
 }
 
