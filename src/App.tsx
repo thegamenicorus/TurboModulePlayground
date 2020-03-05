@@ -26,9 +26,9 @@ import { Header, Footer } from './components/Page';
 declare var global: { HermesInternal: null | {} };
 
 const App: FunctionComponent = () => {
-  if (Platform.OS === 'android') {
-    alert(NativeMyTurboModule.greeting());
-    return <View />;
+  let NativeMyTurboModuleCxx = null;
+  if (Platform.OS === 'ios') {
+    NativeMyTurboModuleCxx = require('./turbomodules/NativeMyTurboModuleCxx');
   }
   return (
     <>
@@ -39,10 +39,10 @@ const App: FunctionComponent = () => {
           style={styles.scrollView}>
           <Header />
           <View style={styles.body}>
-            {/* <Greeting
+            <Greeting
               nativeModule={NativeMyTurboModule}
               nativeModuleCxx={NativeMyTurboModuleCxx}
-            /> */}
+            />
             <Footer />
           </View>
         </ScrollView>
