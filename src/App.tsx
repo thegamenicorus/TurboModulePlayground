@@ -19,15 +19,16 @@ import {
 } from 'react-native';
 
 import NativeMyTurboModule from './turbomodules/NativeMyTurboModule';
-import NativeMyTurboModuleCxx from './turbomodules/NativeMyTurboModuleCxx';
+// import NativeMyTurboModuleCxx from './turbomodules/NativeMyTurboModuleCxx';
 import Greeting from './components/Greeting';
 import { Header, Footer } from './components/Page';
 
 declare var global: { HermesInternal: null | {} };
 
 const App: FunctionComponent = () => {
-  if (Platform.OS === 'android') {
-    return <View />;
+  let NativeMyTurboModuleCxx = null;
+  if (Platform.OS === 'ios') {
+    NativeMyTurboModuleCxx = require('./turbomodules/NativeMyTurboModuleCxx');
   }
   return (
     <>
