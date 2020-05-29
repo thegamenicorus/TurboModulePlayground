@@ -11,15 +11,13 @@ const Greeting: FunctionComponent<Props> = ({
 }) => (
   <Container title="Greeting from Turbo Modules">
     <Log
-      caption={`NativeMyTurboModule (${nativeModule.language()}):`}
+      caption="NativeMyTurboModule (Obj-C):"
       value={nativeModule.greeting()}
     />
-    {nativeModuleCxx && (
-      <Log
-        caption={`NativeMyTurboModuleCxx (${nativeModuleCxx.language()}):`}
-        value={nativeModuleCxx.greeting()}
-      />
-    )}
+    <Log
+      caption="NativeMyTurboModuleCxx (C++):"
+      value={nativeModuleCxx.greeting()}
+    />
   </Container>
 );
 

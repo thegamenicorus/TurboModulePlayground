@@ -15,7 +15,6 @@ import * as TurboModuleRegistry from 'react-native/Libraries/TurboModule/TurboMo
 
 export interface Spec extends TurboModule {
   // Exported methods.
-  +language: () => string;
   +greeting: () => string;
 }
 
