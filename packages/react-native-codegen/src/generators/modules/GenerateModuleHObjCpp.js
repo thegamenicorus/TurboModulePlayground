@@ -27,7 +27,7 @@ type FilesOutput = Map<string, string>;
 const moduleTemplate = `
 class JSI_EXPORT Native::_MODULE_NAME_::SpecJSI : public ObjCTurboModule {
 public:
-  Native::_MODULE_NAME_::SpecJSI(id<RCTTurboModule> instance, std::shared_ptr<JSCallInvoker> jsInvoker);
+  Native::_MODULE_NAME_::SpecJSI(id<RCTTurboModule> instance, std::shared_ptr<CallInvoker> jsInvoker);
 };`;
 
 const protocolTemplate = `
@@ -178,7 +178,7 @@ module.exports = {
     const protocols = Object.keys(nativeModules)
       .map(name => {
         const objectForGeneratingStructs: Array<ObjectForGeneratingStructs> = [];
-        const {properties} = nativeModules[name];
+        const { properties } = nativeModules[name];
         const implementations = properties
           .map(prop => {
             const nativeArgs = prop.typeAnnotation.params
@@ -202,7 +202,9 @@ module.exports = {
                 } else {
                   paramObjCType = translatePrimitiveJSTypeToObjCType(
                     param,
-                    `Unspopported type for param "${param.name}" in ${prop.name}. Found: ${param.typeAnnotation.type}`,
+                    `Unspopported type for param "${param.name}" in ${
+                      prop.name
+                    }. Found: ${param.typeAnnotation.type}`,
                   );
                 }
                 return `${i === 0 ? '' : param.name}:(${paramObjCType})${
@@ -211,7 +213,7 @@ module.exports = {
               })
               .join('\n   ')
               .concat(callbackArgs(prop));
-            const {returnTypeAnnotation} = prop.typeAnnotation;
+            const { returnTypeAnnotation } = prop.typeAnnotation;
             if (
               returnTypeAnnotation.type === 'ObjectTypeAnnotation' &&
               returnTypeAnnotation.properties
@@ -231,7 +233,9 @@ module.exports = {
                 '::_RETURN_VALUE_::',
                 translatePrimitiveJSTypeToObjCTypeForReturn(
                   returnTypeAnnotation,
-                  `Unspopported return type for ${prop.name}. Found: ${prop.typeAnnotation.returnTypeAnnotation.type}`,
+                  `Unspopported return type for ${prop.name}. Found: ${
+                    prop.typeAnnotation.returnTypeAnnotation.type
+                  }`,
                 ),
               )
               .replace('::_ARGS_::', nativeArgs);

@@ -21,7 +21,7 @@ type FilesOutput = Map<string, string>;
 const moduleTemplate = `
 class JSI_EXPORT Native::_MODULE_NAME_::SpecJSI : public TurboModule {
 protected:
-  Native::_MODULE_NAME_::SpecJSI(std::shared_ptr<JSCallInvoker> jsInvoker);
+  Native::_MODULE_NAME_::SpecJSI(std::shared_ptr<CallInvoker> jsInvoker);
 
 public:
 ::_MODULE_PROPERTIES_::
@@ -104,7 +104,7 @@ module.exports = {
 
     const modules = Object.keys(nativeModules)
       .map(name => {
-        const {properties} = nativeModules[name];
+        const { properties } = nativeModules[name];
         const traversedProperties = properties
           .map(prop => {
             const traversedArgs = prop.typeAnnotation.params

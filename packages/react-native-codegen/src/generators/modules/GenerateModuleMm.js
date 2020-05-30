@@ -10,10 +10,10 @@
 
 'use strict';
 
-import type {SchemaType, NativeModuleShape} from '../../CodegenSchema';
+import type { SchemaType, NativeModuleShape } from '../../CodegenSchema';
 
-const {capitalizeFirstLetter} = require('./ObjCppUtils/GenerateStructs');
-const {flatObjects} = require('./ObjCppUtils/Utils');
+const { capitalizeFirstLetter } = require('./ObjCppUtils/GenerateStructs');
+const { flatObjects } = require('./ObjCppUtils/Utils');
 
 type FilesOutput = Map<string, string>;
 
@@ -34,7 +34,7 @@ const proprertyDefTemplate =
 const moduleTemplate = `
 ::_TURBOMODULE_METHOD_INVOKERS_::
 
-Native::_MODULE_NAME_::SpecJSI::Native::_MODULE_NAME_::SpecJSI(id<RCTTurboModule> instance, std::shared_ptr<JSCallInvoker> jsInvoker)
+Native::_MODULE_NAME_::SpecJSI::Native::_MODULE_NAME_::SpecJSI(id<RCTTurboModule> instance, std::shared_ptr<CallInvoker> jsInvoker)
   : ObjCTurboModule("::_MODULE_NAME_::", instance, jsInvoker) {
 ::_PROPERTIES_MAP_::::_CONVERSION_SELECTORS_::
 }`.trim();
@@ -146,7 +146,7 @@ module.exports = {
     schema: SchemaType,
     moduleSpecName: string,
   ): FilesOutput {
-    const nativeModules: {[name: string]: NativeModuleShape} = Object.keys(
+    const nativeModules: { [name: string]: NativeModuleShape } = Object.keys(
       schema.modules,
     )
       .filter(moduleName => moduleName.substr(-3) !== 'Cxx')
@@ -167,9 +167,9 @@ module.exports = {
         return acc.concat(
           flatObjects(
             module.properties.reduce((moduleAcc, property) => {
-              const {returnTypeAnnotation} = property.typeAnnotation;
+              const { returnTypeAnnotation } = property.typeAnnotation;
               if (returnTypeAnnotation.type === 'ObjectTypeAnnotation') {
-                const {properties} = returnTypeAnnotation;
+                const { properties } = returnTypeAnnotation;
                 if (properties) {
                   moduleAcc.push({
                     name: capitalizeFirstLetter(property.name) + 'ReturnType',
@@ -187,7 +187,7 @@ module.exports = {
                       if (
                         param.typeAnnotation.type === 'ObjectTypeAnnotation'
                       ) {
-                        const {properties} = param.typeAnnotation;
+                        const { properties } = param.typeAnnotation;
                         if (properties) {
                           return {
                             name:
@@ -219,7 +219,7 @@ module.exports = {
 
     const modules = Object.keys(nativeModules)
       .map(name => {
-        const {properties} = nativeModules[name];
+        const { properties } = nativeModules[name];
         const translatedMethods = properties
           .map(property => tranlsateMethodForImplementation(property))
           .join('\n');
@@ -231,7 +231,7 @@ module.exports = {
               .map(
                 ({
                   name: propertyName,
-                  typeAnnotation: {params, returnTypeAnnotation},
+                  typeAnnotation: { params, returnTypeAnnotation },
                 }) =>
                   propertyName === 'getConstants' &&
                   returnTypeAnnotation.type === 'ObjectTypeAnnotation' &&
@@ -247,7 +247,7 @@ module.exports = {
           .replace(
             '::_CONVERSION_SELECTORS_::',
             properties
-              .map(({name: propertyName, typeAnnotation: {params}}) =>
+              .map(({ name: propertyName, typeAnnotation: { params } }) =>
                 params
                   .map((param, index) =>
                     param.typeAnnotation.type === 'ObjectTypeAnnotation' &&

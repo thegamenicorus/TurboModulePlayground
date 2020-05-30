@@ -10,7 +10,7 @@
 
 'use strict';
 
-import type {SchemaType} from '../../CodegenSchema';
+import type { SchemaType } from '../../CodegenSchema';
 
 type FilesOutput = Map<string, string>;
 
@@ -37,7 +37,7 @@ const proprertyDefTemplate =
 const moduleTemplate = `
 ::_MODULE_PROPERTIES_::
 
-Native::_MODULE_NAME_::SpecJSI::Native::_MODULE_NAME_::SpecJSI(std::shared_ptr<JSCallInvoker> jsInvoker)
+Native::_MODULE_NAME_::SpecJSI::Native::_MODULE_NAME_::SpecJSI(std::shared_ptr<CallInvoker> jsInvoker)
   : TurboModule("::_MODULE_NAME_::", jsInvoker) {
 ::_PROPERTIES_MAP_::
 }`.trim();
@@ -126,7 +126,7 @@ module.exports = {
 
     const modules = Object.keys(nativeModules)
       .map(name => {
-        const {properties} = nativeModules[name];
+        const { properties } = nativeModules[name];
         const traversedProperties = properties
           .map(property => traverseProprety(property))
           .join('\n');
@@ -135,7 +135,7 @@ module.exports = {
           .replace(
             '::_PROPERTIES_MAP_::',
             properties
-              .map(({name: propertyName, typeAnnotation: {params}}) =>
+              .map(({ name: propertyName, typeAnnotation: { params } }) =>
                 proprertyDefTemplate
                   .replace(/::_PROPERTY_NAME_::/g, propertyName)
                   .replace(/::_ARGS_COUNT_::/g, params.length.toString()),
