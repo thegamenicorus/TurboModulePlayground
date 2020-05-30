@@ -16,7 +16,7 @@ static facebook::jsi::Value __hostFunction_NativeMyTurboModuleSpecJSI_greeting(f
          .invokeObjCMethod(rt, StringKind, "greeting", @selector(greeting), args, count);
 }
 
-NativeMyTurboModuleSpecJSI::NativeMyTurboModuleSpecJSI(id<RCTTurboModule> instance, std::shared_ptr<JSCallInvoker> jsInvoker)
+NativeMyTurboModuleSpecJSI::NativeMyTurboModuleSpecJSI(id<RCTTurboModule> instance, std::shared_ptr<CallInvoker> jsInvoker)
   : ObjCTurboModule("MyTurboModule", instance, jsInvoker) {
   methodMap_["greeting"] = MethodMetadata {0, __hostFunction_NativeMyTurboModuleSpecJSI_greeting};
 }

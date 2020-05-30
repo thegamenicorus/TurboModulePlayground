@@ -15,7 +15,7 @@ namespace react {
 
 class JSI_EXPORT NativeMyTurboModuleCxxSpecJSI : public TurboModule {
 protected:
-  NativeMyTurboModuleCxxSpecJSI(std::shared_ptr<JSCallInvoker> jsInvoker);
+  NativeMyTurboModuleCxxSpecJSI(std::shared_ptr<CallInvoker> jsInvoker);
 
 public:
 virtual jsi::String greeting(jsi::Runtime &rt) = 0;

@@ -15,7 +15,7 @@ using namespace facebook::react;
 @implementation MyTurboModule //TurboModule name
 
 - (std::shared_ptr<TurboModule>)getTurboModuleWithJsInvoker:
-(std::shared_ptr<JSCallInvoker>)jsInvoker
+(std::shared_ptr<CallInvoker>)jsInvoker
 {
   return std::make_shared<NativeMyTurboModuleSpecJSI>(self, jsInvoker);
 }

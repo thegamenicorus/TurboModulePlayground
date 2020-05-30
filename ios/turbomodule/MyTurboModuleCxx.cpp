@@ -15,7 +15,7 @@ namespace facebook {
 namespace react {
 
 MyTurboModuleCxx::MyTurboModuleCxx(
-    std::shared_ptr<JSCallInvoker> jsInvoker)
+    std::shared_ptr<CallInvoker> jsInvoker)
     : NativeMyTurboModuleCxxSpecJSI(jsInvoker) {}
 
 jsi::String MyTurboModuleCxx::greeting(jsi::Runtime &rt) {

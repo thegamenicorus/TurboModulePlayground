@@ -15,7 +15,7 @@ static jsi::Value __hostFunction_NativeMyTurboModuleCxxSpecJSI_greeting(jsi::Run
   return static_cast<NativeMyTurboModuleCxxSpecJSI *>(&turboModule)->greeting(rt);
 }
 
-NativeMyTurboModuleCxxSpecJSI::NativeMyTurboModuleCxxSpecJSI(std::shared_ptr<JSCallInvoker> jsInvoker)
+NativeMyTurboModuleCxxSpecJSI::NativeMyTurboModuleCxxSpecJSI(std::shared_ptr<CallInvoker> jsInvoker)
   : TurboModule("MyTurboModuleCxx", jsInvoker) {
   methodMap_["greeting"] = MethodMetadata {0, __hostFunction_NativeMyTurboModuleCxxSpecJSI_greeting};
 }

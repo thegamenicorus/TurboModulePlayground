@@ -20,7 +20,7 @@ Class TurboModuleClassProvider(const char *name) {
   return RCTCoreModulesClassProvider(name);
 }
 
-std::shared_ptr<TurboModule> TurboModuleProvider(const std::string &name, std::shared_ptr<JSCallInvoker> jsInvoker) {
+std::shared_ptr<TurboModule> TurboModuleProvider(const std::string &name, std::shared_ptr<CallInvoker> jsInvoker) {
   if (name == "MyTurboModuleCxx") {
     return std::make_shared<MyTurboModuleCxx>(jsInvoker);
   }
@@ -29,7 +29,7 @@ std::shared_ptr<TurboModule> TurboModuleProvider(const std::string &name, std::s
 
 std::shared_ptr<TurboModule> TurboModuleProvider(const std::string &name,
                                                          id<RCTTurboModule> instance,
-                                                        std::shared_ptr<JSCallInvoker> jsInvoker) {
+                                                 std::shared_ptr<CallInvoker> jsInvoker) {
   if (name == "MyTurboModule") {
     return std::make_shared<NativeMyTurboModuleSpecJSI>(instance, jsInvoker);
   }

@@ -87,14 +87,14 @@
 }
 
 - (std::shared_ptr<facebook::react::TurboModule>)getTurboModule:(const std::string &)name
-                                                      jsInvoker:(std::shared_ptr<facebook::react::JSCallInvoker>)jsInvoker
+                                                      jsInvoker:(std::shared_ptr<facebook::react::CallInvoker>)jsInvoker
 {
   return facebook::react::TurboModuleProvider(name, jsInvoker);
 }
 
 - (std::shared_ptr<facebook::react::TurboModule>)getTurboModule:(const std::string &)name
                                                        instance:(id<RCTTurboModule>)instance
-                                                      jsInvoker:(std::shared_ptr<facebook::react::JSCallInvoker>)jsInvoker
+                                                      jsInvoker:(std::shared_ptr<facebook::react::CallInvoker>)jsInvoker
 {
   return facebook::react::TurboModuleProvider(name, instance, jsInvoker);
 }

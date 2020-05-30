@@ -12,12 +12,12 @@
 		13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB11A68108700A75B9A /* LaunchScreen.xib */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		252E8B15D1DE7CA74642FC5F /* libPods-TurboModulePlaygroundTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F08F96714F3B2A7F49185A39 /* libPods-TurboModulePlaygroundTests.a */; };
 		253ECEDA5DE688BC36ED0508 /* libPods-TurboModulePlayground-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 94FC73BBEAB2304B7E194205 /* libPods-TurboModulePlayground-tvOSTests.a */; };
 		2D02E4BC1E0B4A80006451C7 /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		2DCD954D1E0B4F2C00145EB5 /* TurboModulePlaygroundTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* TurboModulePlaygroundTests.m */; };
+		44D7440BB1DCC1DE084794B2 /* libPods-TurboModulePlayground-TurboModulePlaygroundTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E3B1C6E4E44B3BFACEC66C8 /* libPods-TurboModulePlayground-TurboModulePlaygroundTests.a */; };
 		6F9B6EE0AADF71E7D1EF66B5 /* libPods-TurboModulePlayground-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BAF88E29DC1FB735F0AD416 /* libPods-TurboModulePlayground-tvOS.a */; };
 		A43B4010031E56E8029FB15E /* libPods-TurboModulePlayground.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 046760F48BF30FAB61AFA63D /* libPods-TurboModulePlayground.a */; };
 		BE76781223ADD20B00835DAA /* TurboModuleProvider.mm in Sources */ = {isa = PBXBuildFile; fileRef = BE76781123ADD20B00835DAA /* TurboModuleProvider.mm */; };
@@ -62,7 +62,10 @@
 		2BAF88E29DC1FB735F0AD416 /* libPods-TurboModulePlayground-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TurboModulePlayground-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E47B1E0B4A5D006451C7 /* TurboModulePlayground-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TurboModulePlayground-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* TurboModulePlayground-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "TurboModulePlayground-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2EA81276B0B8C602A1BBFA43 /* Pods-TurboModulePlayground-TurboModulePlaygroundTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TurboModulePlayground-TurboModulePlaygroundTests.debug.xcconfig"; path = "Target Support Files/Pods-TurboModulePlayground-TurboModulePlaygroundTests/Pods-TurboModulePlayground-TurboModulePlaygroundTests.debug.xcconfig"; sourceTree = "<group>"; };
 		4C4C7B2D231D6598F4C0AD44 /* Pods-TurboModulePlayground-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TurboModulePlayground-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-TurboModulePlayground-tvOSTests/Pods-TurboModulePlayground-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
+		4E3B1C6E4E44B3BFACEC66C8 /* libPods-TurboModulePlayground-TurboModulePlaygroundTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TurboModulePlayground-TurboModulePlaygroundTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		56F7FB330671DFD94D0DC944 /* Pods-TurboModulePlayground-TurboModulePlaygroundTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TurboModulePlayground-TurboModulePlaygroundTests.release.xcconfig"; path = "Target Support Files/Pods-TurboModulePlayground-TurboModulePlaygroundTests/Pods-TurboModulePlayground-TurboModulePlaygroundTests.release.xcconfig"; sourceTree = "<group>"; };
 		747181C16DBFD01BBAEBB4BA /* Pods-TurboModulePlayground-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TurboModulePlayground-tvOS.release.xcconfig"; path = "Target Support Files/Pods-TurboModulePlayground-tvOS/Pods-TurboModulePlayground-tvOS.release.xcconfig"; sourceTree = "<group>"; };
 		94FC73BBEAB2304B7E194205 /* libPods-TurboModulePlayground-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TurboModulePlayground-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CA3F83091420F27BF5A6756 /* Pods-TurboModulePlaygroundTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TurboModulePlaygroundTests.release.xcconfig"; path = "Target Support Files/Pods-TurboModulePlaygroundTests/Pods-TurboModulePlaygroundTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -81,7 +84,6 @@
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
 		EE4BFE6A3A6893A51947EE2F /* Pods-TurboModulePlaygroundTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TurboModulePlaygroundTests.debug.xcconfig"; path = "Target Support Files/Pods-TurboModulePlaygroundTests/Pods-TurboModulePlaygroundTests.debug.xcconfig"; sourceTree = "<group>"; };
-		F08F96714F3B2A7F49185A39 /* libPods-TurboModulePlaygroundTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TurboModulePlaygroundTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,7 +91,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				252E8B15D1DE7CA74642FC5F /* libPods-TurboModulePlaygroundTests.a in Frameworks */,
+				44D7440BB1DCC1DE084794B2 /* libPods-TurboModulePlayground-TurboModulePlaygroundTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -160,7 +162,7 @@
 				046760F48BF30FAB61AFA63D /* libPods-TurboModulePlayground.a */,
 				2BAF88E29DC1FB735F0AD416 /* libPods-TurboModulePlayground-tvOS.a */,
 				94FC73BBEAB2304B7E194205 /* libPods-TurboModulePlayground-tvOSTests.a */,
-				F08F96714F3B2A7F49185A39 /* libPods-TurboModulePlaygroundTests.a */,
+				4E3B1C6E4E44B3BFACEC66C8 /* libPods-TurboModulePlayground-TurboModulePlaygroundTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -209,6 +211,8 @@
 				4C4C7B2D231D6598F4C0AD44 /* Pods-TurboModulePlayground-tvOSTests.release.xcconfig */,
 				EE4BFE6A3A6893A51947EE2F /* Pods-TurboModulePlaygroundTests.debug.xcconfig */,
 				9CA3F83091420F27BF5A6756 /* Pods-TurboModulePlaygroundTests.release.xcconfig */,
+				2EA81276B0B8C602A1BBFA43 /* Pods-TurboModulePlayground-TurboModulePlaygroundTests.debug.xcconfig */,
+				56F7FB330671DFD94D0DC944 /* Pods-TurboModulePlayground-TurboModulePlaygroundTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -555,7 +559,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-TurboModulePlaygroundTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-TurboModulePlayground-TurboModulePlaygroundTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -634,7 +638,7 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EE4BFE6A3A6893A51947EE2F /* Pods-TurboModulePlaygroundTests.debug.xcconfig */;
+			baseConfigurationReference = 2EA81276B0B8C602A1BBFA43 /* Pods-TurboModulePlayground-TurboModulePlaygroundTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -657,7 +661,7 @@
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9CA3F83091420F27BF5A6756 /* Pods-TurboModulePlaygroundTests.release.xcconfig */;
+			baseConfigurationReference = 56F7FB330671DFD94D0DC944 /* Pods-TurboModulePlayground-TurboModulePlaygroundTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;

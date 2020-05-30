@@ -17,7 +17,7 @@ namespace react {
  */
 class MyTurboModuleCxx : public NativeMyTurboModuleCxxSpecJSI {
  public:
-  MyTurboModuleCxx(std::shared_ptr<JSCallInvoker> jsInvoker);  
+  MyTurboModuleCxx(std::shared_ptr<CallInvoker> jsInvoker);  
   
   jsi::String greeting(jsi::Runtime &rt)override;
 };
